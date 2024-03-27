@@ -1,7 +1,7 @@
 import axios from "axios";
 
 async function DeletePatient(
-    pesel: string
+    pesel: string | undefined
 ) {
     const res = prompt("Are you sure you want to delete this patient? (yes/no)");
     if (res === "yes") {

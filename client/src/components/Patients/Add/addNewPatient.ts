@@ -11,6 +11,9 @@ export function AddNewPatient(
    })
          .then(res => {
              alert(res.data)
+             if(res.status === 200) {
+                    window.location.href = "/list";
+             }
          })
          .catch(err => {
              alert(err)

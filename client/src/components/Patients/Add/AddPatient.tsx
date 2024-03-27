@@ -13,15 +13,15 @@ function AddPatient() {
     });
 
     return (
-        <div className="max-w-md mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
-            <h1 className="text-2xl font-semibold mb-4">Add Patient</h1>
+        <div className="w-3/4 lg:w-1/4 mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
+            <h1 className="text-2xl text-gray-700 font-semibold mb-4">Add Patient</h1>
             <form className="space-y-4" onSubmit={(e) => {
                 e.preventDefault();
                 AddNewPatient(newPatient);
             }}>
                 <div className="flex flex-col">
-                    <label htmlFor="name" className="mb-1">Name:</label>
-                    <input type="text" id="name" name="name" className="border border-gray-300 rounded-lg px-3 py-2"
+                    <label htmlFor="name" className="mb-1 text-gray-700">Name:</label>
+                    <input type="text" id="name" name="name" className="text-gray-700 border border-gray-300 rounded-lg px-3 py-2 bg-gray-50"
                     onChange={(e) => {
                         setNewPatient({...newPatient, name: e.target.value});
                     }}
@@ -29,8 +29,8 @@ function AddPatient() {
                     />
                 </div>
                 <div className="flex flex-col">
-                    <label htmlFor="lastName" className="mb-1">Last Name:</label>
-                    <input type="text" id="lastName" name="lastName" className="border border-gray-300 rounded-lg px-3 py-2"
+                    <label htmlFor="lastName" className="mb-1 text-gray-700">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" className="text-gray-700 border border-gray-300 rounded-lg px-3 py-2 bg-gray-50"
                     onChange={(e) => {
                         setNewPatient({...newPatient, lastName: e.target.value});
                     }}
@@ -38,8 +38,8 @@ function AddPatient() {
                     />
                 </div>
                 <div className="flex flex-col">
-                    <label htmlFor="pesel" className="mb-1">PESEL:</label>
-                    <input type="text" id="personalId" name="personalId" className="border border-gray-300 rounded-lg px-3 py-2"
+                    <label htmlFor="pesel" className="mb-1 text-gray-700">PESEL:</label>
+                    <input type="text" id="personalId" name="personalId" className="text-gray-700 border border-gray-300 rounded-lg px-3 py-2 bg-gray-50"
                     onChange={(e) => {
                         setNewPatient({...newPatient, pesel: e.target.value});
                     }}
@@ -47,8 +47,8 @@ function AddPatient() {
                     />
                 </div>
                 <div className="flex flex-col">
-                    <label htmlFor="city" className="mb-1">City:</label>
-                    <input type="text" id="city" name="city" className="border border-gray-300 rounded-lg px-3 py-2"
+                    <label htmlFor="city" className="mb-1 text-gray-700">City:</label>
+                    <input type="text" id="city" name="city" className="text-gray-700 border border-gray-300 rounded-lg px-3 py-2 bg-gray-50"
                     onChange={(e) => {
                         setNewPatient({...newPatient, city: e.target.value});
                     }}
@@ -56,8 +56,8 @@ function AddPatient() {
                     />
                 </div>
                 <div className="flex flex-col">
-                    <label htmlFor="street" className="mb-1">Street:</label>
-                    <input type="text" id="street" name="street" className="border border-gray-300 rounded-lg px-3 py-2"
+                    <label htmlFor="street" className="mb-1 text-gray-700">Street:</label>
+                    <input type="text" id="street" name="street" className="text-gray-700 border border-gray-300 rounded-lg px-3 py-2 bg-gray-50"
                     onChange={(e) => {
                         setNewPatient({...newPatient, street: e.target.value});
                     }}
@@ -65,8 +65,8 @@ function AddPatient() {
                     />
                 </div>
                 <div className="flex flex-col">
-                    <label htmlFor="zipCode" className="mb-1">Zip Code:</label>
-                    <input type="text" id="zipCode" name="zipCode" className="border border-gray-300 rounded-lg px-3 py-2"
+                    <label htmlFor="zipCode" className="mb-1 text-gray-700">Zip Code:</label>
+                    <input type="text" id="zipCode" name="zipCode" className="text-gray-700 border border-gray-300 rounded-lg px-3 py-2 bg-gray-50"
                     onChange={(e) => {
                         setNewPatient({...newPatient, zipCode: e.target.value});
                     }}

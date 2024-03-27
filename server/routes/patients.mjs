@@ -3,6 +3,7 @@ import cors from 'cors';
 import express from 'express';
 import {body, validationResult} from 'express-validator';
 import { createPatientValidator } from '../validators.mjs';
+import {ObjectId} from "mongodb";
 const router = express.Router();
 
 const corsOptions = {
@@ -20,7 +21,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     let collection = await db.collection('patients');
     //IF IT IS NOT WORKING TRY TO CHANGE LINE BELOW
-    let query = {pesel: `${req.params.id}`};
+    let query = {_id: new ObjectId(req.params.id)};
     let results = await collection.findOne(query);
     console.log(results);
 
@@ -65,7 +66,7 @@ router.patch('/:id',createPatientValidator, async (req, res) => {
         });
         return;
     }
-    const query = {pesel: req.params.id};
+    const query = {_id: new ObjectId(req.params.id)};
     const updates = {$set: req.body};
     let collection = await db.collection('patients');
     let result = await collection.updateOne(query, updates);
@@ -81,7 +82,7 @@ router.patch('/:id',createPatientValidator, async (req, res) => {
 });
 
 router.delete('/:id', async (req, res) => {
-    const query = {pesel: req.params.id};
+    const query = {_id: new ObjectId(req.params.id)};
     let collection = await db.collection('patients');
     let result = await collection.deleteOne(query);
     if(result.deletedCount === 0) {
