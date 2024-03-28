@@ -9,4 +9,10 @@ describe("ListPatients", () => {
         render(<ListPatients />);
         expect(screen.getByText("Sort by:")).toBeInTheDocument();
     });
+
+    it("should render patients cards", () => {
+        render(<ListPatients />);
+        const patientCards = screen.getAllByTestId("patient-card");
+        expect(patientCards.length).toBe(3);
+    });
 });
