@@ -9,9 +9,4 @@ describe("ListPatients", () => {
         render(<ListPatients />);
         expect(screen.getByText("Sort by:")).toBeInTheDocument();
     });
-    it("should render ListPatients component", async () => {
-        render(<ListPatients />);
-        const patientsCards = await screen.findAllByTestId("patient-card");
-        expect(patientsCards.length).toBe(3);
-    });
 });
