@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'dmserif-display', serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -9,5 +9,18 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
+input::-webkit-input-placeholder{
+  color: #0f0f0f;
+}
+input:-moz-placeholder {
+  color:#0f0f0f;
+}
+
+@font-face {
+  font-family: 'dmserif-display';
+  src: url('./fonts/dmsd-r.ttf') format('truetype');
+    font-weight: 400;
+}

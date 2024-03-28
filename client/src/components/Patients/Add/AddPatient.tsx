@@ -1,6 +1,7 @@
 import {Patient} from "../../../types/types.ts";
 import {useState} from "react";
 import {AddNewPatient} from "./addNewPatient.ts";
+import {Link} from "react-router-dom";
 
 function AddPatient() {
     const [newPatient, setNewPatient] = useState<Patient>({
@@ -14,7 +15,14 @@ function AddPatient() {
 
     return (
         <div className="w-3/4 lg:w-1/4 mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
-            <h1 className="text-2xl text-gray-700 font-semibold mb-4">Add Patient</h1>
+            <div className={"flex justify-between items-center"}>
+                <h1 className="text-2xl text-gray-700 font-semibold mb-4">Add Patient</h1>
+                <Link to={"/"}>
+                    <button className="btn btn-outline btn-accent">
+                        <p className="text-gray-700">Go back</p>
+                    </button>
+                </Link>
+            </div>
             <form className="space-y-4" onSubmit={(e) => {
                 e.preventDefault();
                 AddNewPatient(newPatient);

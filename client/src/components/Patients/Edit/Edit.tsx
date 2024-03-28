@@ -1,4 +1,4 @@
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import EditPatientData from "./editPatientData.ts";
 import useGetPatient from "./useGetPatient.ts";
 
@@ -8,8 +8,15 @@ function Edit() {
 
     return (
         <>
-            <div className="w-3/4 md:w-1/4 mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
-                <h1 className="text-2xl font-semibold mb-4 text-gray-700">Edit Patient</h1>
+            <div className="w-3/4 lg:w-1/4 mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
+                <div className={"flex justify-between items-center"}>
+                    <h1 className="text-2xl font-semibold mb-4 text-gray-700">Edit Patient</h1>
+                    <Link to={"/list"}>
+                        <button className="btn btn-outline btn-accent">
+                            <p className="text-gray-700">Go back</p>
+                        </button>
+                    </Link>
+                </div>
                 <form className="space-y-4" onSubmit={(e) => {
                     e.preventDefault();
                     EditPatientData(patientToUpdate, initialPesel);
