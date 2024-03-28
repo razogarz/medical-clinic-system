@@ -25,8 +25,10 @@ function Edit() {
                         <label htmlFor="name" className="mb-1 text-gray-700">Name:</label>
                         <input type="text" id="name" name="name" className="bg-gray-50 text-gray-700 border border-gray-300 rounded-lg px-3 py-2"
                                onChange={(e) => {
-                                   setPatientToUpdate({...patientToUpdate, name: e.target.value})
-                               }}
+                                   setPatientToUpdate((prevPatientState) => {
+                                       return {...prevPatientState, name: e.target.value};
+                                   });
+                                 }}
                                defaultValue={patientToUpdate.name}
                                required={true}
                         />
@@ -35,7 +37,9 @@ function Edit() {
                         <label htmlFor="lastName" className="mb-1 text-gray-700">Last Name:</label>
                         <input type="text" id="lastName" name="lastName" className="bg-gray-50 text-gray-700 border border-gray-300 rounded-lg px-3 py-2"
                                onChange={(e) => {
-                                   setPatientToUpdate({...patientToUpdate, lastName: e.target.value})
+                                   setPatientToUpdate((prevPatientState) => {
+                                       return {...prevPatientState, lastName: e.target.value};
+                                   });
                                }}
                                defaultValue={patientToUpdate.lastName}
                                required={true}
@@ -45,7 +49,9 @@ function Edit() {
                         <label htmlFor="pesel" className="mb-1 text-gray-700">PESEL:</label>
                         <input type="text" id="personalId" name="personalId" className="bg-gray-50 text-gray-700 border border-gray-300 rounded-lg px-3 py-2"
                                onChange={(e) => {
-                                   setPatientToUpdate({...patientToUpdate, pesel: e.target.value})
+                                   setPatientToUpdate((prevPatientState) => {
+                                        return {...prevPatientState, pesel: e.target.value};
+                                      });
                                }}
                                  defaultValue={patientToUpdate.pesel}
                                required={true}
@@ -55,7 +61,9 @@ function Edit() {
                         <label htmlFor="city" className="mb-1 text-gray-700">City:</label>
                         <input type="text" id="city" name="city" className="bg-gray-50 text-gray-700 border border-gray-300 rounded-lg px-3 py-2"
                                onChange={(e) => {
-                                   setPatientToUpdate({...patientToUpdate, city: e.target.value});
+                                   setPatientToUpdate((prevPatientState) => {
+                                        return {...prevPatientState, city: e.target.value};
+                                      });
                                }}
                                defaultValue={patientToUpdate.city}
                                required={true}
@@ -65,7 +73,9 @@ function Edit() {
                         <label htmlFor="street" className="mb-1 text-gray-700">Street:</label>
                         <input type="text" id="street" name="street" className="bg-gray-50 text-gray-700 border border-gray-300 rounded-lg px-3 py-2"
                                onChange={(e) => {
-                                   setPatientToUpdate({...patientToUpdate, street: e.target.value})
+                                   setPatientToUpdate((prevPatientState) => {
+                                        return {...prevPatientState, street: e.target.value};
+                                      });
                                }}
                                  defaultValue={patientToUpdate.street}
                                required={true}
@@ -75,7 +85,9 @@ function Edit() {
                         <label htmlFor="zipCode" className="mb-1 text-gray-700">Zip Code:</label>
                         <input type="text" id="zipCode" name="zipCode" className="bg-gray-50 text-gray-700 border border-gray-300 rounded-lg px-3 py-2"
                                onChange={(e) => {
-                                   setPatientToUpdate({...patientToUpdate, zipCode: e.target.value})
+                                   setPatientToUpdate((prevPatientState) => {
+                                        return {...prevPatientState, zipCode: e.target.value};
+                                      });
                                }}
                                     defaultValue={patientToUpdate.zipCode}
                                required={true}

@@ -53,11 +53,11 @@ function ListPatients() {
                 </select>
                 <div>
                     <div className={"flex justify-center items-center"}>
-                        <button className="join-item btn bg-background text-gray-800" onClick={() => {setCurrentPage(currentPage-1)}}
+                        <button className="join-item btn bg-background text-gray-800" onClick={() => {setCurrentPage((prev) => prev-1)}}
                                 disabled={currentPage === 1}
                         >«</button>
                         <button className="join-item btn bg-background text-gray-800">{currentPage}</button>
-                        <button className="join-item btn bg-background text-gray-800" onClick={() => {setCurrentPage(currentPage+1)}}
+                        <button className="join-item btn bg-background text-gray-800" onClick={() => {setCurrentPage((prev) => prev+1)}}
                                 disabled={currentPage*9 > patientsList.length}
                         >»</button>
                     </div>
@@ -67,7 +67,7 @@ function ListPatients() {
                 {
                     patients.map((patient, index) => {
                         return (
-                            <div className="card w-96 bg-primary text-primary-content" key={`${patient.name}_${index}`}>
+                            <div className="card w-96 bg-primary text-primary-content" key={`${patient.name}_${index}`} data-testid={"patient-card"}>
                                 <div className="card-body">
                                     <h2 className="card-title">{patient.name} {patient.lastName}</h2>
                                     <p>{patient.city}, {patient.street} {patient.zipCode}</p>
@@ -92,9 +92,10 @@ function ListPatients() {
                         )
                     })
                 }
+
             </div>
         </div>
-    )
+    );
 }
 
 
