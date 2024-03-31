@@ -8,7 +8,7 @@ to search for patients by their PESEL number.
 
 # IMPORTANT EDIT:
 I sincerily apologize, as I have accidentally deleted one empty component before final commit.
-In order for the application to work, you need to delete imports and calls in lines :2 and :26 in Homepage.tsx (import Decoration).
+In order for the application to work, you need to delete imports and calls in lines :2 and :27 in Homepage.tsx (import Decoration).
 I understand, if it doesn't meet requirements, editing this readme is the most I can do now, I hope. (readme edited 31.03.2024).
 
 ## HOW TO RUN
