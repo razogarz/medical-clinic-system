@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Decoration from "../Decoration";
 
 function Homepage() {
     return (
@@ -24,7 +23,6 @@ function Homepage() {
                         </button>
                     </Link>
                 </div>
-                <Decoration/>
             </div>
         </>
     );
